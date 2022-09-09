@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body {
+            /* 整体字体 与加载的字体名称一致 可涵盖大部分汉字，包括生僻字*/
+            font-family: FangSong, HanaMinB;
+            line-height: 1.2;
+            /*设置背景色*/
+            /*background: #00FF00 ;*/
+            /*设置背景图片 base64*/
+            /*background-image:url(data:image/gif;base64,AAAA) no-repeat fixed top;*/
+        }
+
+        /* 表格样式 */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            /*width:100%;*/
+            /* 分页设置 */
+            -fs-table-paginate: paginate;
+            /* 表格内容换页设置 */
+            page-break-inside: auto;
+        }
+
+        tr {
+            /* 表格行避免分页被切断 */
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        td {
+            border: 1px solid #000000;
+            /*padding:2px;*/
+        }
+
+        th {
+            border: 1px solid #000000;
+            /*padding:2px;*/
+            /*text-align: center;*/
+        }
+
+        /*强制分页样式，可在块中追加分页样式，
+        例如<div class="page_break"></div>
+        或 <div style="page-break-after:always;"></div>
+        */
+        .page_break {
+            page-break-after: always;
+        }
+
+        /** 指定pdf纸张大小 **/
+        @page {
+            /* A4 大小 */
+            /*size: A4;*/
+            /* A4 大小 横向 */
+            size: A4 landscape;
+            /* 四边留白 1cm */
+            margin: 1cm;
+
+            /* 底部留白 1cm */
+            /*margin-bottom: 1cm;*/
+            /* page四周黑框 */
+            /*border: thin solid black;*/
+        }
+    </style>
+</head>
+
+<body>
+<div style="text-align: center;">
+    <object type="image/barcode" style="width:200px;height: 40px;" th:value="${barcode}" format="CODE_128"></object>
+
+    <object type="mark" style="width:10px;height:10px" th:value="${barcode}"/>
+    <!-- 具体内容 -->
+    <h1>开标一览表</h1>
+
+    <table>
+        <tr>
+            <th> 序号</th>
+            <th> 一级指标</th>
+            <th> 二级指标</th>
+            <th> 数据</th>
+            <th> 说明</th>
+        </tr>
+
+        <tr>
+            <td rowspan="5">1</td>
+            <td rowspan="5">安全性</td>
+            <td>资本充足率</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td>不良贷款率</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td>拨备覆盖率</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td>流动性覆盖率</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td>流动性比率</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>收益收性</td>
+            <td> 存款利率</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td rowspan="2">3</td>
+            <td rowspan="2">贡献度</td>
+            <td>在陕西省资产规模情况</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td>在陕西省纳税规模情况</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td rowspan="2">4</td>
+            <td rowspan="2">其它事项</td>
+            <td>一般性存款余额</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+        <tr>
+            <td>为本期国库定期存款可提供的符合条件的国债或地方政府债情况</td>
+            <td>２０２０年末：　１００％</td>
+            <td>总行２０２０年末数据</td>
+        </tr>
+
+    </table>
+
+
+</div>
+</body>
+
+</html>

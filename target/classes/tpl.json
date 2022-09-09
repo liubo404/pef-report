@@ -1,0 +1,7 @@
+{
+  "templateName":"第一个模板",
+  "elements":[
+    {"elementPath":"/home/ben/work/explore/pdf-report/src/main/resources/ele1.html"},
+    {"elementPath":"/home/ben/work/explore/pdf-report/src/main/resources/ele2.html"}
+  ]
+}
