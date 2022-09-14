@@ -77,18 +77,21 @@
 
     <table>
         <tr>
-            <th> 序号</th>
-            <th> 一级指标</th>
-            <th> 二级指标</th>
-            <th> 数据</th>
-            <th> 说明</th>
+            <th rowspan="2"> 序号</th>
+            <th colspan="2"> 评分内容</th>
+            <th rowspan="2"> 数据</th>
+            <th rowspan="2"> 说明</th>
+        </tr>
+        <tr>
+            <td> 一级指标</td>
+            <td> 二级指标</td>
         </tr>
 
         <tr>
             <td rowspan="5">1</td>
             <td rowspan="5">安全性</td>
             <td>资本充足率</td>
-            <td>２０２０年末：　１００％</td>
+            <td th:text="${car}" >２０２０年末：　１００％</td>
             <td>总行２０２０年末数据</td>
         </tr>
         <tr>

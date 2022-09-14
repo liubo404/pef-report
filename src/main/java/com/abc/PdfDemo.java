@@ -63,8 +63,49 @@ public class PdfDemo {
 
 //        extractImageFromPdf();
 
+//        parsePdf();
+
+        editPdf();
+        readPdf();
         parsePdf();
     }
+    private static void editPdf() throws IOException {
+        File file = new File("/tmp/demo.pdf");
+        PDDocument document = PDDocument.load(file);
+        PDDocumentInformation info = document.getDocumentInformation();
+        info.setKeywords("xxxxx");
+        document.setDocumentInformation(info);
+        document.save("/tmp/demo.pdf");
+        HashMap pdfMeta = new HashMap<String, String>();
+        pdfMeta.put("Author", info.getAuthor());
+        pdfMeta.put("Creator", info.getCreator());
+        pdfMeta.put("Keywords", info.getKeywords());
+        pdfMeta.put("Producer", info.getProducer());
+        pdfMeta.put("Subject", info.getSubject());
+        pdfMeta.put("Title", info.getTitle());
+        pdfMeta.put("PagesInfo", info.getCustomMetadataValue("PagesInfo"));
+
+        System.out.println(pdfMeta);
+
+    }
+    private static void readPdf() throws IOException {
+        File file = new File("/tmp/demo.pdf");
+        PDDocument document = PDDocument.load(file);
+        PDDocumentInformation info = document.getDocumentInformation();
+
+        HashMap pdfMeta = new HashMap<String, String>();
+        pdfMeta.put("Author", info.getAuthor());
+        pdfMeta.put("Creator", info.getCreator());
+        pdfMeta.put("Keywords", info.getKeywords());
+        pdfMeta.put("Producer", info.getProducer());
+        pdfMeta.put("Subject", info.getSubject());
+        pdfMeta.put("Title", info.getTitle());
+        pdfMeta.put("PagesInfo", info.getCustomMetadataValue("PagesInfo"));
+
+        System.out.println(pdfMeta);
+
+    }
+
 
     private static void parsePdf() throws IOException {
         File file = new File("/tmp/demo.pdf");
@@ -79,6 +120,8 @@ public class PdfDemo {
         pdfMeta.put("Subject",info.getSubject());
         pdfMeta.put("Title",info.getTitle());
         pdfMeta.put("PagesInfo",info.getCustomMetadataValue("PagesInfo"));
+
+        System.out.println(pdfMeta);
 
 
         InputStream fis = new FileInputStream(file);
@@ -172,6 +215,7 @@ public class PdfDemo {
         JSONPath.set(jsonData, "barcode", "123UUIDrandomUUID456");
         jsonData.put("barcode", "1234567890");
         jsonData.put("xxx", "1234567890");
+        jsonData.put("car", "2021年末：100%");
 
 
         //单个构件生成，数据参数可以为空
