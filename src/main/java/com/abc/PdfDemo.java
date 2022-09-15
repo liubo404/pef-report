@@ -207,6 +207,21 @@ public class PdfDemo {
         doc2.close();
     }
 
+    private static void md5Info() throws IOException {
+//        PDDocument document = new PDDocument();
+        File file = new File("/home/ben/Desktop/test.pdf");
+        PDDocument doc1 = PDDocument.load(file);
+        PDDocumentInformation pi =  doc1.getDocumentInformation();
+        pi.setKeywords("mdk.xxxxx.yyyy.zzz");
+        doc1.setDocumentInformation(pi);
+
+        doc1.save("/home/ben/Desktop/test_OUT.pdf");
+        System.out.println("PDF created");
+
+        //Closing the document
+        doc1.close();
+    }
+
     private static void generateDemoPdf() throws IOException {
         PdfGenerator pdfGenerator = new PdfBoxGenerator();
         pdfGenerator.init();
