@@ -6,18 +6,24 @@ import ink.rayin.htmladapter.base.PdfGenerator;
 import ink.rayin.htmladapter.openhtmltopdf.service.PdfBoxGenerator;
 import ink.rayin.tools.utils.ResourceUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
+import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationText;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.UUID;
 
 @Slf4j
 public class PdfDemo {
@@ -56,7 +62,7 @@ public class PdfDemo {
 
     public static void main(String[] args) throws Exception {
 //        exp01ElementGenerateTest();
-        generateDemoPdf();
+//        generateDemoPdf();
         //Creating PDF document object
 
 //        insertPdfPage();
@@ -65,17 +71,25 @@ public class PdfDemo {
 
 //        parsePdf();
 
-        editPdf();
-        readPdf();
+//        editPdf();
+//        readPdf();
         parsePdf();
+//        verifyPdf();
     }
+
     private static void editPdf() throws IOException {
-        File file = new File("/tmp/demo.pdf");
+        String tempFile = "/home/ben/Downloads/b0b7f141ae674858bb4e71097ffcb5d8.pdf";
+        File file = new File(tempFile);
         PDDocument document = PDDocument.load(file);
         PDDocumentInformation info = document.getDocumentInformation();
         info.setKeywords("xxxxx");
         document.setDocumentInformation(info);
-        document.save("/tmp/demo.pdf");
+        PDAnnotation pa = new PDAnnotationText();
+        pa.setHidden(true);
+        pa.setContents("6d8094a96066a8e4e514d913e571d3fd");
+        pa.setAnnotationName("md5");
+        document.getPage(0).setAnnotations(Arrays.asList(pa));
+        document.save(tempFile);
         HashMap pdfMeta = new HashMap<String, String>();
         pdfMeta.put("Author", info.getAuthor());
         pdfMeta.put("Creator", info.getCreator());
@@ -88,8 +102,9 @@ public class PdfDemo {
         System.out.println(pdfMeta);
 
     }
+
     private static void readPdf() throws IOException {
-        File file = new File("/tmp/demo.pdf");
+        File file = new File("/home/ben/Downloads/7ae4e7183ea94e01b7771c268c6f23aa.pdf");
         PDDocument document = PDDocument.load(file);
         PDDocumentInformation info = document.getDocumentInformation();
 
@@ -108,18 +123,19 @@ public class PdfDemo {
 
 
     private static void parsePdf() throws IOException {
-        File file = new File("/tmp/demo.pdf");
+        String tempFile = "/home/ben/Downloads/b0b7f141ae674858bb4e71097ffcb5d8.pdf";
+        File file = new File(tempFile);
         PDDocument document = PDDocument.load(file);
         PDDocumentInformation info = document.getDocumentInformation();
 
-        HashMap pdfMeta = new HashMap<String,String>();
-        pdfMeta.put("Author",info.getAuthor());
-        pdfMeta.put("Creator",info.getCreator());
-        pdfMeta.put("Keywords",info.getKeywords());
-        pdfMeta.put("Producer",info.getProducer());
-        pdfMeta.put("Subject",info.getSubject());
-        pdfMeta.put("Title",info.getTitle());
-        pdfMeta.put("PagesInfo",info.getCustomMetadataValue("PagesInfo"));
+        HashMap pdfMeta = new HashMap<String, String>();
+        pdfMeta.put("Author", info.getAuthor());
+        pdfMeta.put("Creator", info.getCreator());
+        pdfMeta.put("Keywords", info.getKeywords());
+        pdfMeta.put("Producer", info.getProducer());
+        pdfMeta.put("Subject", info.getSubject());
+        pdfMeta.put("Title", info.getTitle());
+        pdfMeta.put("PagesInfo", info.getCustomMetadataValue("PagesInfo"));
 
         System.out.println(pdfMeta);
 
@@ -131,9 +147,12 @@ public class PdfDemo {
         PDFTextStripper pdfStripper = new PDFTextStripper();
         String text = pdfStripper.getText(document);
         System.out.println("=================>text");
+        String pdfMd5 = DigestUtils.md5Hex(text+"ctj1507");
+        log.info("开标一览表生成,pdfMd5={}", pdfMd5);
+
         System.out.println(text);
         System.out.println(text.hashCode());
-        String t2 = text ;
+        String t2 = text;
         System.out.println(t2.hashCode());
 
         document.close();
@@ -153,6 +172,26 @@ public class PdfDemo {
 //            e.printStackTrace();
 //        }
     }
+
+    private static void verifyPdf() throws IOException {
+        File file = new File("/home/ben/Downloads/b0b7f141ae674858bb4e71097ffcb5d8.pdf");
+
+        PDDocument document = PDDocument.load(file);
+        PDDocumentInformation info = document.getDocumentInformation();
+
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+        String text = pdfStripper.getText(document);
+        String pdfMd5 = DigestUtils.md5Hex(text + info.getAuthor());
+        log.info("开标一览表生成,pdfMd5={}", pdfMd5);
+
+        System.out.println("=================>verifyPdf");
+        log.info("开标一览表生成,verifyPdf pdfMd5={}, keywords={} result={},", pdfMd5, info.getKeywords(), pdfMd5.equals(info.getKeywords()));
+
+
+        document.close();
+
+    }
+
 
     private static void extractImageFromPdf() throws IOException {
         //Loading an existing PDF document
@@ -211,7 +250,7 @@ public class PdfDemo {
 //        PDDocument document = new PDDocument();
         File file = new File("/home/ben/Desktop/test.pdf");
         PDDocument doc1 = PDDocument.load(file);
-        PDDocumentInformation pi =  doc1.getDocumentInformation();
+        PDDocumentInformation pi = doc1.getDocumentInformation();
         pi.setKeywords("mdk.xxxxx.yyyy.zzz");
         doc1.setDocumentInformation(pi);
 
@@ -237,7 +276,7 @@ public class PdfDemo {
 //        pdfGenerator.generatePdfFileByHtmlAndData("/home/ben/work/explore/pdf-report/src/main/resources/demo.html", jsonData, "/home/ben/work/explore/pdf-report/src/main/resources/demo.pdf");
 
         //
-        pdfGenerator.generatePdfFileByTplConfigFile(ResourceUtil.getResourceAbsolutePathByClassPath("bid.json"),jsonData, "/tmp/demo.pdf");
+        pdfGenerator.generatePdfFileByTplConfigFile(ResourceUtil.getResourceAbsolutePathByClassPath("bid.json"), jsonData, "/tmp/demo.pdf");
 
     }
 }

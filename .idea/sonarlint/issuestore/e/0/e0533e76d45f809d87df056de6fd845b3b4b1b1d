@@ -1,4 +1,76 @@
 
-]	java:S1251"<This block of commented-out lines of code should be removed.(Ö¼¼†ùÿÿÿÿ8ÏĞ–×±0
-X	java:S125*"<This block of commented-out lines of code should be removed.(º ïø8â‘çë®0
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(úŞ ×üÿÿÿÿ
+V	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(šªçÄ8Ö„“ÿ±0
+X	java:S1259"<This block of commented-out lines of code should be removed.(º ïø8â‘çë®0
+_
+java:S1075Æ"ARefactor your code to get this URI from a customizable parameter.(™’„©8Ö„“ÿ±0
+X	java:S125D"<This block of commented-out lines of code should be removed.(ß‘ÏĞ8Ö„“ÿ±0
+Y	java:S125Ú"<This block of commented-out lines of code should be removed.(‰¸Ğ8•ıÍ€´0
+V	java:S106Œ"9Replace this use of System.out or System.err by a logger.(†ıôÓ8•ıÍ€´0
+j
+java:S1192_"HDefine a constant instead of duplicating this literal "Creator" 3 times.(í¼Õ¤ıÿÿÿÿ8•ıÍ€´0
+M
+java:S3740ƒ"/Provide the parametrized type for this generic.(Ö§²Ò8•ıÍ€´0
+[	java:S106š"9Replace this use of System.out or System.err by a logger.(ö›şÿÿÿÿ8Ö„“ÿ±0
+X	java:S125M"<This block of commented-out lines of code should be removed.(Ğ«ƒ®8ŠÂƒ´0
+Y	java:S125”"<This block of commented-out lines of code should be removed.(Î”®ß8Ö„“ÿ±0
+`	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(úŞ ×üÿÿÿÿ
+O
+java:S1144ù",Remove this unused private "md5Info" method.(Ï¡Ãûÿÿÿÿÿ8•ıÍ€´0
+c
+java:S1192c"FDefine a constant instead of duplicating this literal "Title" 3 times.(ÿ­¡û8•ıÍ€´0
+]	java:S125F"<This block of commented-out lines of code should be removed.(½á¶Ôûÿÿÿÿ8Ö„“ÿ±0
+U	java:S106f"9Replace this use of System.out or System.err by a logger.(†ıôÓ8•ıÍ€´0
+I
+java:S1144P",Remove this unused private "editPdf" method.(ä¯Ù8¤’Äƒ´0
+V
+java:S1144Ä"8Remove this unused private "extractImageFromPdf" method.(ÂÌÖñ8Ö„“ÿ±0
+–
+java:S1192Q"yDefine a constant instead of duplicating this literal "/home/ben/Downloads/b0b7f141ae674858bb4e71097ffcb5d8.pdf" 3 times.(Îäñ³8Ï®Ãƒ´0
+Q
+java:S1144°".Remove this unused private "verifyPdf" method.(¶È†Ùùÿÿÿÿ8®‹ƒ´0
+d
+java:S1075Û"ARefactor your code to get this URI from a customizable parameter.(²ŠÈìüÿÿÿÿ8Ö„“ÿ±0
+W
+java:S1144ˆ"4Remove this unused private "generateDemoPdf" method.(ëÓÓÛûÿÿÿÿ8•ıÍ€´0
+L
+java:S3740]"/Provide the parametrized type for this generic.(Ö§²Ò8Ö„“ÿ±0
+[	java:S106œ"9Replace this use of System.out or System.err by a logger.(†¿Ğºıÿÿÿÿ8Ö„“ÿ±0
+N
+java:S1144j",Remove this unused private "readPdf" method.(”€Ïøÿÿÿÿ8å‚Ù€´0
+U	java:S106•"9Replace this use of System.out or System.err by a logger.(ßö÷%8Ö„“ÿ±0
+P
+java:S1144Ù"2Remove this unused private "insertPdfPage" method.(—¶¤8Ö„“ÿ±0
+c
+java:S1075k"ARefactor your code to get this URI from a customizable parameter.(Ûí‡àşÿÿÿÿ8•ıÍ€´0
+X	java:S125J"<This block of commented-out lines of code should be removed.(ƒØ’À8¤’Äƒ´0
+f
+java:S1192a"IDefine a constant instead of duplicating this literal "Producer" 3 times.(¢°»¡8•ıÍ€´0
+^	java:S125 "<This block of commented-out lines of code should be removed.(ãŸû¥ÿÿÿÿÿ8Ö„“ÿ±0
+k
+java:S1192`"IDefine a constant instead of duplicating this literal "Keywords" 3 times.(äşçÿÿÿÿÿ8•ıÍ€´0
+]	java:S125@"<This block of commented-out lines of code should be removed.(Ö¼¼†ùÿÿÿÿ8ÏĞ–×±0
+^	java:S125å"<This block of commented-out lines of code should be removed.(¦¬Œ·ûÿÿÿÿ8Ö„“ÿ±0
+i
+java:S1192^"GDefine a constant instead of duplicating this literal "Author" 3 times.(›”¼›ÿÿÿÿÿ8•ıÍ€´0
+[	java:S106ò"9Replace this use of System.out or System.err by a logger.(éå™ÿÿÿÿÿ8Ö„“ÿ±0
+[	java:S106‚"9Replace this use of System.out or System.err by a logger.(éå™ÿÿÿÿÿ8•ıÍ€´0
+e
+java:S1192b"HDefine a constant instead of duplicating this literal "Subject" 3 times.(£çì¯8•ıÍ€´0
+V	java:S106™"9Replace this use of System.out or System.err by a logger.(”“î€8Ö„“ÿ±0
+d
+java:S1075û"ARefactor your code to get this URI from a customizable parameter.(²ŠÈìüÿÿÿÿ8•ıÍ€´0
+l
+java:S1192d"JDefine a constant instead of duplicating this literal "PagesInfo" 6 times.(Ş…¨­ÿÿÿÿÿ8•ıÍ€´0
+U	java:S106x"9Replace this use of System.out or System.err by a logger.(†ıôÓ8•ıÍ€´0
+[	java:S106»"9Replace this use of System.out or System.err by a logger.(‘šÍ­úÿÿÿÿ8è×€´0
+_
+java:S1075Ş"ARefactor your code to get this URI from a customizable parameter.(Ò’—‰8Ö„“ÿ±0
+d
+java:S1075±"ARefactor your code to get this URI from a customizable parameter.(«åòæüÿÿÿÿ8†öÏ€´0
+L
+java:S3740o"/Provide the parametrized type for this generic.(Ö§²Ò8•ıÍ€´0
+[	java:S106‘"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ8Ö„“ÿ±0
+^
+java:S1075Ğ"ARefactor your code to get this URI from a customizable parameter.(Šç–W8Ö„“ÿ±0
+Y	java:S125ú"<This block of commented-out lines of code should be removed.(‰¸Ğ8Ö„“ÿ±0
+]	java:S125H"<This block of commented-out lines of code should be removed.(Ş‹ÀŒùÿÿÿÿ8•ıÍ€´0

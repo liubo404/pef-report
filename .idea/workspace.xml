@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d08a04e7-81d0-4363-a389-4fded3473786" name="Default Changelist" comment="" />
+    <list default="true" id="d08a04e7-81d0-4363-a389-4fded3473786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/abc/BidOpenItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/abc/BidOpenVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/abc/t_open_bid.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abc/PdfDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abc/PdfDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/abc/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/abc/AppTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +39,19 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="2E43Wfh1qcuZW15arOF6owFePnq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/abc" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/abc" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
@@ -57,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AppTest.generateDemoPdfTest">
     <configuration name="PdfDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.abc.PdfDemo" />
       <module name="pdf-report" />
@@ -71,9 +81,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.bidDocx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdf-report" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.abc" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.AppTest" />
+      <option name="METHOD_NAME" value="bidDocx" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.generateDemoPdfTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdf-report" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.abc" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.AppTest" />
+      <option name="METHOD_NAME" value="generateDemoPdfTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdf-report" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.abc" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.AppTest" />
+      <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.verifyPdfTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pdf-report" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.abc" />
+      <option name="MAIN_CLASS_NAME" value="com.abc.AppTest" />
+      <option name="METHOD_NAME" value="verifyPdfTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.generateDemoPdfTest" />
+        <item itemvalue="JUnit.AppTest.bidDocx" />
+        <item itemvalue="JUnit.AppTest.verifyPdfTest" />
         <item itemvalue="Application.PdfDemo" />
+        <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -104,31 +182,94 @@
       <workItem from="1661841273792" duration="2653000" />
       <workItem from="1662603484001" duration="3097000" />
       <workItem from="1662606644980" duration="16029000" />
-      <workItem from="1662687408039" duration="596000" />
+      <workItem from="1662687408039" duration="794000" />
+      <workItem from="1662708695628" duration="599000" />
+      <workItem from="1663032197810" duration="572000" />
+      <workItem from="1663047361798" duration="9119000" />
+      <workItem from="1663132174037" duration="331000" />
+      <workItem from="1663133429873" duration="8731000" />
+      <workItem from="1663225891017" duration="221000" />
+      <workItem from="1663227020118" duration="7681000" />
+      <workItem from="1663289835086" duration="323000" />
+      <workItem from="1663657017104" duration="1138000" />
+      <workItem from="1663726771016" duration="11072000" />
+      <workItem from="1663814262915" duration="1104000" />
     </task>
+    <task id="LOCAL-00001" summary="init 2">
+      <created>1663147156896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663147156896</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init 3">
+      <created>1663221985343</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663221985343</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init 2" />
+    <MESSAGE value="init 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="init 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/abc/PdfDemo.java</url>
-          <line>141</line>
+          <line>223</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/abc/PdfDemo.java</url>
-          <line>69</line>
+          <line>126</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/abc/PdfDemo.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/abc/Md5Test.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/abc/AppTest.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="al.get(0).getAnnotationName()" language="JAVA" />
+      </configuration>
       <configuration name="Application">
         <watch expression="info.get`" language="JAVA" />
+        <watch expression="md.digest()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
